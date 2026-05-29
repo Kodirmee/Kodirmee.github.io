@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammadkodir Abdullakhamidov</title>
+<meta name="description" content="Mohammadkodir Abdullakhamidov — Computer Science undergraduate at HITSZ. Backend and systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf7;
+    --ink:#1a1a1a;
+    --muted:#5a5a5a;
+    --faint:#9a9a9a;
+    --line:#e6e3dd;
+    --accent:#234d3a;
+    --maxw:680px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Inter",-apple-system,sans-serif;
+    font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+    font-feature-settings:"ss01";
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+
+  header{padding:80px 0 50px}
+  .top{display:flex;gap:32px;align-items:flex-start}
+  @media(max-width:520px){.top{flex-direction:column-reverse;gap:24px}}
+  .top-text{flex:1}
+  h1{font-size:28px;font-weight:600;letter-spacing:-.4px;margin-bottom:6px}
+  .role{color:var(--muted);font-size:15px;margin-bottom:18px}
+  .lede{color:var(--ink);font-size:16px;max-width:520px}
+  .photo{
+    width:120px;height:150px;border-radius:4px;object-fit:cover;object-position:center top;
+    border:1px solid var(--line);flex-shrink:0;
+    filter:saturate(.9);
+  }
+
+  section{padding:38px 0;border-top:1px solid var(--line)}
+  h2{font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--faint);margin-bottom:20px}
+  p{margin-bottom:14px;color:var(--ink)}
+  p:last-child{margin-bottom:0}
+
+  .item{margin-bottom:22px}
+  .item:last-child{margin-bottom:0}
+  .item-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:3px}
+  .item-title{font-weight:600;font-size:15.5px}
+  .item-org{color:var(--muted);font-weight:400;font-size:14px}
+  .item-date{color:var(--faint);font-size:13px;font-family:"JetBrains Mono",monospace;white-space:nowrap}
+  .item p{font-size:14.5px;color:var(--muted);margin:4px 0 0}
+  .item-links{margin-top:6px;font-size:13.5px}
+  .item-links a{color:var(--accent)}
+
+  .stack{margin-top:8px;font-size:13px;color:var(--faint);font-family:"JetBrains Mono",monospace}
+
+  .grid{display:grid;grid-template-columns:120px 1fr;gap:6px 24px;font-size:14.5px}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+  .grid dt{color:var(--faint);font-size:13px;font-family:"JetBrains Mono",monospace}
+  .grid dd{color:var(--ink)}
+
+  .links-row{display:flex;flex-wrap:wrap;gap:18px;font-size:14.5px}
+
+  footer{padding:30px 0 60px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--faint)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="top-text">
+        <h1>Mohammadkodir Abdullakhamidov</h1>
+        <div class="role">Computer Science undergraduate · HITSZ · Shenzhen</div>
+        <p class="lede">Second-year CS student at the Harbin Institute of Technology,
+        Shenzhen. I like backend work and have been spending more time recently on
+        storage systems and I/O performance.</p>
+      </div>
+      <img class="photo" src="photo.jpg" alt="Mohammadkodir Abdullakhamidov"
+           onerror="this.style.display='none'">
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>About</h2>
+    <p>Before university I spent two years working through a structured software
+    program (Java and C#), building dozens of small projects. That habit of learning
+    things by building a small version of them has stuck with me.</p>
+    <p>I work mostly in Python and Java now, and have been reading systems papers
+    and running small experiments on real storage traces. Outside of code I
+    co-founded a student club at HITSZ, run a small education-consulting project,
+    and teach IELTS. I work across Uzbek, Russian, English, and Chinese.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Projects</h2>
+
+    <div class="item">
+      <div class="item-head">
+        <span><span class="item-title">RAG Document Chatbot</span> <span class="item-org">· personal</span></span>
+        <span class="item-date">2025</span>
+      </div>
+      <p>A FastAPI service for chatting with your own documents — upload a PDF or
+      TXT, ask questions, get answers grounded in the file. Auth, caching,
+      rate-limiting, vector storage, all containerized.</p>
+      <div class="stack">FastAPI · PostgreSQL · Redis · ChromaDB · LangChain · JWT · Docker · Pytest</div>
+      <div class="item-links"><a href="https://github.com/Kodirmee/Rag-chatbot-version-1" target="_blank" rel="noopener">github →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span><span class="item-title">Custom AI Chat</span> <span class="item-org">· personal</span></span>
+        <span class="item-date">2025</span>
+      </div>
+      <p>A local AI chat service running on Ollama. Behavior is fully configurable
+      at runtime through an editable system prompt. No external API keys.</p>
+      <div class="stack">FastAPI · LangChain · Ollama · Docker</div>
+      <div class="item-links"><a href="https://github.com/Kodirmee/AI-ChatBot" target="_blank" rel="noopener">github →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span><span class="item-title">CoffeeShop</span> <span class="item-org">· Java backend</span></span>
+        <span class="item-date">2024</span>
+      </div>
+      <p>A REST API for a coffee shop (products, customers, purchases). Built with
+      Spring Boot and Spring Data JPA, with a controller–service–repository layout.</p>
+      <div class="stack">Java · Spring Boot · Spring Data JPA · MySQL</div>
+      <div class="item-links"><a href="https://github.com/Kodirmee/CoffeeshopSpring" target="_blank" rel="noopener">github →</a></div>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span><span class="item-title">I/O Trace Analysis</span> <span class="item-org">· self-directed</span></span>
+        <span class="item-date">2026</span>
+      </div>
+      <p>Reading public MSR Cambridge enterprise storage traces and measuring how
+      hot regions repeat over time. Plus a small controlled experiment on
+      daily vs. weekly prediction windows — done to understand storage research
+      hands-on.</p>
+      <div class="stack">Python · data analysis · matplotlib</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Skills</h2>
+    <dl class="grid">
+      <dt>Languages</dt><dd>Python, Java, C#, C++, JavaScript, SQL</dd>
+      <dt>Backend</dt><dd>Spring Boot, FastAPI, REST, JPA / SQLAlchemy, JWT</dd>
+      <dt>Data stores</dt><dd>PostgreSQL, MySQL, Redis, ChromaDB</dd>
+      <dt>AI / data</dt><dd>LangChain, RAG, Ollama, matplotlib</dd>
+      <dt>Tools</dt><dd>Git, Linux, Docker, Pytest, Alembic</dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Leadership &amp; work experience</h2>
+
+    <div class="item">
+      <div class="item-head">
+        <span><span class="item-title">Co-Founder &amp; Vice President</span> <span class="item-org">· HSIYC</span></span>
+        <span class="item-date">2024 – present</span>
+      </div>
+      <p>Co-founded the HITSZ International Youth Club. Coordinate teams across
+      academics, volunteering, events, and publicity.</p>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span><span class="item-title">Founder</span> <span class="item-org">· Go_StudyChina</span></span>
+        <span class="item-date">2025 – present</span>
+      </div>
+      <p>A small education-consulting service helping students from Central Asia
+      apply to study in China.</p>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span><span class="item-title">Certified IELTS Teacher</span> <span class="item-org">· Winsor</span></span>
+        <span class="item-date">~1 year</span>
+      </div>
+      <p>Taught English to students aged 13–15. Several reached IELTS band 7.0 or above.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="links-row">
+      <a href="mailto:2024331137@stu.hit.edu.cn">2024331137@stu.hit.edu.cn</a>
+      <a href="https://github.com/Kodirmee" target="_blank" rel="noopener">github.com/Kodirmee</a>
+      <a href="CV.pdf" target="_blank">CV (pdf)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Shenzhen</div>
+</footer>
+
+</body>
+</html>
